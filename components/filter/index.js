@@ -1,4 +1,4 @@
-const filterBehavior = require('../../behaviors/filter.js');
+const filterBehavior = require('../../behaviors/base.js');
 
 Component({
   behaviors: [filterBehavior],
@@ -11,6 +11,10 @@ Component({
     languageIndex: {
       type: Number,
       value: 0,
+    },
+    showLang: {
+      type: Boolean,
+      value: true,
     },
   },
   methods: {

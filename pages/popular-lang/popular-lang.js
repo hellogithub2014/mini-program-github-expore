@@ -1,4 +1,4 @@
-const filterBehavior = require('../../behaviors/filter.js');
+const filterBehavior = require('../../behaviors/base.js');
 
 Component({
   behaviors: [filterBehavior],

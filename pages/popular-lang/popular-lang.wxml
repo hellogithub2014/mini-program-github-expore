@@ -5,6 +5,7 @@
     class="filter-comp"
     range-index="{{filter.rangeIndex}}"
     language-index="{{filter.languageIndex}}"
+    show-lang="{{false}}"
     bind:range-update="handleRangeChange"
     bind:language-update="handleLanguageChange"
   ></filter>

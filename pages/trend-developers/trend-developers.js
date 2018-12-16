@@ -1,4 +1,4 @@
-const filterBehavior = require('../../behaviors/filter.js');
+const filterBehavior = require('../../behaviors/base.js');
 
 Component({
   behaviors: [filterBehavior],
@@ -7,7 +7,7 @@ Component({
       rangeIndex: 1,
       languageIndex: 0,
     },
-    api: 'https://github-trending-api.now.sh/repositories',
+    api: 'https://github-trending-api.now.sh/developers',
   },
   methods: {
     onLoad: function() {
