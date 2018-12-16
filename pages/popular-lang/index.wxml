@@ -1,0 +1,15 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 条件筛选 -->
+  <filter
+    class="filter-comp"
+    range-index="{{filter.rangeIndex}}"
+    language-index="{{filter.languageIndex}}"
+    bind:range-update="handleRangeChange"
+    bind:language-update="handleLanguageChange"
+  ></filter>
+  <!-- 列表展示 -->
+  <scroll-view scroll-y>
+    <view wx:for="{{list.popular}}" wx:key="name" style="display: block;" class="repo-card"> {{ item.name }} </view>
+  </scroll-view>
+</view>

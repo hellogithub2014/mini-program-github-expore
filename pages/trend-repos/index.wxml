@@ -1,0 +1,23 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 条件筛选 -->
+  <filter
+    class="filter-comp"
+    range-index="{{filter.rangeIndex}}"
+    language-index="{{filter.languageIndex}}"
+    bind:range-update="handleRangeChange"
+    bind:language-update="handleLanguageChange"
+  ></filter>
+  <!-- 列表展示 -->
+  <scroll-view scroll-y>
+    <view wx:for="{{list}}" wx:key="name" style="display: block;" class="repo-card">
+      <view class="title">
+        <span class="author">{{ item.author }}</span> / <span class="name">{{ item.name }}</span>
+      </view>
+      <view class="description">{{ item.description }}</view>
+      <view class="base-info">
+        <span class="stars">{{ item.stars }}</span> <span class="forks">{{ item.forks }}</span>
+      </view>
+    </view>
+  </scroll-view>
+</view>

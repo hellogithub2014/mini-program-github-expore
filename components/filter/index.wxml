@@ -1,0 +1,8 @@
+<div class="filter" hover-class="none" hover-stop-propagation="false">
+  <picker bindchange="onRangeChange" value="{{rangeIndex}}" range="{{range}}" range-key="label">
+    <view class="picker"> 时间：{{ range[rangeIndex].label }} </view>
+  </picker>
+  <picker bindchange="onLanguageChange" value="{{languageIndex}}" range="{{languages}}" range-key="name">
+    <view class="picker"> 语言：{{ languages[languageIndex].name }} </view>
+  </picker>
+</div>

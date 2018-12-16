@@ -1,0 +1,26 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 条件筛选 -->
+  <filter
+    class="filter-comp"
+    range-index="{{filter.rangeIndex}}"
+    language-index="{{filter.languageIndex}}"
+    bind:range-update="handleRangeChange"
+    bind:language-update="handleLanguageChange"
+  ></filter>
+  <!-- 列表展示 -->
+  <scroll-view scroll-y>
+    <view wx:for="{{list}}" wx:key="name" style="display: block;" class="repo-card">
+      <view class="title">
+        <a href="{{item.url}}">{{ item.name }}</a>
+      </view>
+      <view class="repo">
+        <view class="name">
+          <a href="{{item.repo.url}}">{{ item.repo.name }}</a>
+        </view>
+
+        <view class="desc">{{ item.repo.description }}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

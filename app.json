@@ -1,12 +1,33 @@
 {
-  "pages":[
-    "pages/index/index",
+  "pages": [
+    "pages/trend-repos/index",
+    "pages/trend-developers/index",
+    "pages/popular-lang/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "Github Expore",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/trend-repos/index",
+        "text": "Trending Repo"
+      },
+      {
+        "pagePath": "pages/trend-developers/index",
+        "text": "Trending Developers"
+      },
+      {
+        "pagePath": "pages/popular-lang/index",
+        "text": "Popular Lang"
+      }
+    ]
+  },
+  "usingComponents": {
+    "filter": "components/filter/index"
   }
 }

@@ -6,9 +6,3 @@
   border-radius: 3px;
   border: 1px solid #eaecef;
 }
-
-.filter {
-  display: flex;
-  justify-content: space-between;
-  width: 96%;
-}
