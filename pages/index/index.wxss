@@ -1,0 +1,14 @@
+.repo-card {
+  height: 100%;
+  margin: 20rpx 10rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #eaecef;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+}

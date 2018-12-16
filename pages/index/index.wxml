@@ -1,0 +1,22 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="filter" hover-class="none" hover-stop-propagation="false">
+    <picker bindchange="handleRangeChange" value="{{filter.rangeIndex}}" range="{{filterOptions.range}}" range-key="label">
+      <view class="picker"> 时间：{{ filterOptions.range[filter.rangeIndex].label }} </view>
+    </picker>
+    <picker bindchange="handleLanguageChange" value="{{filter.languageIndex}}" range="{{filterOptions.language}}" range-key="name">
+      <view class="picker"> 语言：{{ filterOptions.language[filter.languageIndex].name }} </view>
+    </picker>
+  </view>
+  <scroll-view scroll-y>
+    <view wx:for="{{trends}}" wx:key="name" style="display: block;" class="repo-card">
+      <view class="title">
+        <span class="author">{{ item.author }}</span> / <span class="name">{{ item.name }}</span>
+      </view>
+      <view class="description">{{ item.description }}</view>
+      <view class="base-info">
+        <span class="stars">{{ item.stars }}</span> <span class="forks">{{ item.forks }}</span>
+      </view>
+    </view>
+  </scroll-view>
+</view>
