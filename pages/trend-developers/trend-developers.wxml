@@ -12,9 +12,9 @@
   <scroll-view scroll-y>
     <view wx:for="{{list}}" wx:key="name" style="display: block;" class="repo-card">
       <view class="title">
-        <a href="{{item.url}}">{{ item.name }}</a>
+        <image style="width: 40rpx; height: 40rpx;" mode="scaleToFill" src="{{item.avatar}}"></image> <a href="{{item.url}}">{{ item.username }}</a>
       </view>
-      <view class="repo">
+      <view class="repo" data-index="{{index}}" bindtap="naviToReadme">
         <view class="name">
           <a href="{{item.repo.url}}">{{ item.repo.name }}</a>
         </view>

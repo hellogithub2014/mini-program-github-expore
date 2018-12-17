@@ -21,5 +21,15 @@ Component({
         language: languages[filter.languageIndex].urlParam,
       };
     },
+    naviToReadme(e) {
+      const { index } = e.currentTarget.dataset;
+      const {
+        username,
+        repo: { name },
+      } = this.data.list[index];
+      wx.navigateTo({
+        url: `../repo-detail/repo-detail?owner=${username}&repo=${name}`,
+      });
+    },
   },
 });
