@@ -10,7 +10,7 @@
   ></filter>
   <!-- 列表展示 -->
   <scroll-view scroll-y>
-    <view wx:for="{{list}}" wx:key="name" style="display: block;" class="repo-card">
+    <view wx:for="{{list}}" wx:key="name" style="display: block;" data-index="{{index}}" class="repo-card" bindtap="naviToReadme">
       <view class="title">
         <span class="author">{{ item.author }}</span> / <span class="name">{{ item.name }}</span>
       </view>

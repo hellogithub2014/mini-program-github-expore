@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/trend-repos/index",
-    "pages/trend-developers/index",
-    "pages/popular-lang/index",
-    "pages/logs/logs"
+    "pages/trend-repos/trend-repos",
+    "pages/trend-developers/trend-developers",
+    "pages/popular-lang/popular-lang",
+    "pages/logs/logs",
+    "pages/repo-detail/repo-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,20 +15,28 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/trend-repos/index",
-        "text": "Trending Repo"
+        "pagePath": "pages/trend-repos/trend-repos",
+        "text": "Trending Repo",
+        "iconPath": "assets/images/tabbar-icon1.png",
+        "selectedIconPath": "assets/images/tabbar-icon1-selected.png"
       },
       {
-        "pagePath": "pages/trend-developers/index",
-        "text": "Trending Developers"
+        "pagePath": "pages/trend-developers/trend-developers",
+        "text": "Trending Developers",
+        "iconPath": "assets/images/tabbar-icon2.png",
+        "selectedIconPath": "assets/images/tabbar-icon2-selected.png"
       },
       {
-        "pagePath": "pages/popular-lang/index",
-        "text": "Popular Lang"
+        "pagePath": "pages/popular-lang/popular-lang",
+        "text": "Popular Lang",
+        "iconPath": "assets/images/tabbar-icon3.png",
+        "selectedIconPath": "assets/images/tabbar-icon3-selected.png"
       }
-    ]
+    ],
+    "color": "#d81e06",
+    "selectedColor": "#1afa29"
   },
   "usingComponents": {
-    "filter": "components/filter/index"
+    "filter": "components/filter/filter"
   }
 }

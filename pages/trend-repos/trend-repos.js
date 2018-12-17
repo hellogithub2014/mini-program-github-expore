@@ -21,5 +21,12 @@ Component({
         language: languages[filter.languageIndex].urlParam,
       };
     },
+    naviToReadme(e) {
+      const { index } = e.currentTarget.dataset;
+      const { author, name } = this.data.list[index];
+      wx.navigateTo({
+        url: `../repo-detail/repo-detail?owner=${author}&repo=${name}`,
+      });
+    },
   },
 });

@@ -1,0 +1,6 @@
+@import '../../lib/wxParse/wxParse.wxss';
+.container {
+  padding: 0 10rpx;
+  word-wrap: normal;
+  word-break: normal;
+}

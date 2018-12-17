@@ -23,13 +23,14 @@ module.exports = Behavior({
     getList() {
       const { api } = this.data;
       const param = this.paramGen();
+
+      wx.showLoading();
       wx.request({
         url: api,
         data: param,
         success: (res = {}) => {
           const { statusCode, errMsg, data = [] } = res;
           if (statusCode === 200) {
-            console.log(data);
             this.setData({
               list: data,
             });
@@ -39,6 +40,9 @@ module.exports = Behavior({
         },
         fail(err) {
           console.error(err);
+        },
+        complete() {
+          wx.hideLoading();
         },
       });
     },
